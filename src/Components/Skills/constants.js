@@ -1,13 +1,15 @@
 
-import html from "./../../images/code_icon/html.png";
-import css from "./../../images/code_icon/css.png";
-import js from "./../../images/code_icon/js.png";
-import reactjs from "./../../images/code_icon/react.png";
-import c from "./../../images/code_icon/c.png";
-import sql from "./../../images/code_icon/sql.png";
-import java from "./../../images/code_icon/java.png";
-import bootstrap from "./../../images/code_icon/boots.png";
-import sass from "./../../images/code_icon/sass.png";
+import html from "../../images/code_icon/html.png";
+import css from "../../images/code_icon/css.png";
+import js from "../../images/code_icon/js.png";
+import reactjs from "../../images/code_icon/react.png";
+import c from "../../images/code_icon/c.png";
+import sql from "../../images/code_icon/sql.png";
+import java from "../../images/code_icon/java.png";
+import bootstrap from "../../images/code_icon/boots.png";
+import sass from "../../images/code_icon/sass.png";
+import tailwind from '../../images/code_icon/tailwind.png'
+import nextjs from '../../images/code_icon/nextjs.png'
 
 export const skillsList=[
     {
@@ -43,7 +45,7 @@ export const skillsList=[
         name:"Tailwind CSS",
         skillPercentage:"80%",
         skill_class:'tailwind',
-        logo:bootstrap
+        logo:tailwind
     },
     {
         id:6,
@@ -73,6 +75,13 @@ export const skillsList=[
         skillPercentage:"70%",
         skill_class:'sql',
         logo:sql
+    },
+    {
+        id:10,
+        name:"NextJs",
+        skillPercentage:"70%",
+        skill_class:'nextjs',
+        logo:nextjs
     },
     
 ]

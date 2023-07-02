@@ -36,7 +36,7 @@ const About = () => {
     </div>
   </div>
 
-  <section className="text-gray-600 body-font border-t-4 border-b-4 border-double border-gray-200 w-1/2 ml-auto mr-auto">
+  <section className="text-gray-600 body-font border-t-2 border-b-2  border-gray-200 w-1/2 ml-auto mr-auto">
   {/* <div className="container px-5 py-10 mx-auto"> */}
    <h1 className='text-3xl font-bold text-center bg-gray-100' >Interest</h1>
     <div className="flex flex-wrap m-5">
