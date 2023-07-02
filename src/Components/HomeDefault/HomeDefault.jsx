@@ -4,7 +4,7 @@ import BoyImg from './../../images/boy2.png'
 const HomeDefault = () => {
   return (
  
-    <section className="bg-gradient-to-tl from-gray-700 via-gray-900 to-black text-gray-100 py-20 h-[100vh] caret-transparent ">
+    <section id='Home' className="bg-gradient-to-tl from-gray-700 via-gray-900 to-black text-gray-100 py-20 h-[100vh] caret-transparent ">
       <div className="container mx-auto h-full flex items-center">
         <div className="text-center ml-16">
           <h1 className="text-6xl font-bold animate-jump-in animate-once ">

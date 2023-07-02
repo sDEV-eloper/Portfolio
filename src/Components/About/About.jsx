@@ -1,32 +1,62 @@
 import React from 'react'
+import { Education, Interest } from './Education'
 
 const About = () => {
   return (
-    <section className="bg-gray-100 py-10">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">About Me</h2>
-        <div className="flex flex-col md:flex-row">
-          <div className="md:w-1/2">
-            <h3 className="text-xl font-bold mb-2">Education</h3>
-            <p className="mb-4">
-              I have a Bachelor's degree in Computer Science from XYZ University. During my studies, I focused on web development and frontend technologies. I gained a solid foundation in HTML, CSS, JavaScript, and other frontend frameworks like React and Angular.
-            </p>
-            <p>
-              I am constantly learning and keeping up with the latest trends in frontend development. I enjoy attending web development conferences and taking online courses to enhance my skills.
-            </p>
+   
+<section id="About"  className="text-gray-600  body-font  pt-12">
+    <h1 className='text-5xl font-bold text-center'>About Me</h1>
+
+  <div className="container px-5 py-10 mx-auto ">
+    <h1 className='text-4xl font-bold text-center text-slate-600 mb-6 underline'>Education</h1>
+    
+    <div className="flex flex-wrap  ">
+      {Education.map((item)=>{
+        return(
+      <div className="lg:w-96 p-4 flex ml-auto mr-auto  bg-gray-200 rounded-tl-2xl rounded-br-2xl">
+        {/* <div className="h-full flex items-start "> */}
+          <div className="w-12 flex-shrink-0 flex flex-col text-center leading-none ">
+              <img alt="certificate" src="https://img.icons8.com/?size=512&id=3XvNk4jVfr3m&format=png" className="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center"/>  
           </div>
-          <div className="md:w-1/2 mt-6 md:mt-0">
-            <h3 className="text-xl font-bold mb-2">Hobbies</h3>
-            <p className="mb-4">
-              Apart from coding, I have a passion for photography. I love capturing moments and expressing my creativity through visual storytelling. You can often find me exploring new places with my camera, looking for the perfect shot.
-            </p>
-            <p>
-              I also enjoy hiking and being close to nature. It helps me find inspiration and maintain a healthy work-life balance. Exploring new trails and challenging myself physically is something I truly enjoy.
-            </p>
+          <div className="flex-grow pl-6 flex-row justify-center">
+            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">{item.title}</h2>
+            <h1 className="title-font text-xl font-medium text-gray-900 mb-3">{item.course}</h1>
+            <p className="leading-relaxed ">{item.institution}</p>
+            <span className="inline-flex items-center">
+              <span className="flex-grow ">
+                <span className="title-font font-medium text-gray-900">{item.date}</span>
+              </span>
+            </span>
           </div>
-        </div>
+        {/* </div> */}
       </div>
-    </section>
+          )
+      })}
+
+    </div>
+  </div>
+
+  <section className="text-gray-600 body-font border-t-4 border-b-4 border-double border-gray-200 w-1/2 ml-auto mr-auto">
+  {/* <div className="container px-5 py-10 mx-auto"> */}
+   <h1 className='text-3xl font-bold text-center bg-gray-100' >Interest</h1>
+    <div className="flex flex-wrap m-5">
+      {Interest.map((item)=>{
+      return (
+      // <div className="xl:w-1/4 md:w-1/2 p-4">
+        <div className="bg-gray-100 rounded-lg flex justify-between ml-auto mr-auto flex-col">
+          <img className="h-[80px] rounded w-full  object-center contain mb-2" src={item.img} alt="content"/>
+          <h2 className="text-sm text-gray-900 font-medium title-font text-center">{item.name} </h2>
+</div>
+      // </div>
+      )
+      }
+      )}
+    </div>
+  {/* </div> */}
+</section>
+
+</section>
+
   )
 }
 

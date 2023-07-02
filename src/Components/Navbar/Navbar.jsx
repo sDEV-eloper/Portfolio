@@ -1,7 +1,10 @@
-import React from 'react'
+
 import navigation from './constants';
+import  {scrollToSection}  from '../scrollView/scrollToSection';
 // border-2 border-red-500 
 const Navbar = () => {
+
+  
   return (
     <nav className="bg-gray-800  rounded-b-lg flex justify-center w-1/3 ml-auto mr-auto fixed top-0 left-1/2 transform -translate-x-1/2 z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
@@ -11,9 +14,14 @@ const Navbar = () => {
               <ul className=" flex items-baseline  space-x-4  ">
                 {navigation.map((item, index) => (
                   <li key={index}>
-                    <a href={item.href} className={item.current ? 'active' : 'text-gray-300  px-3 py-2 rounded-md text-sm font-medium '}>
-                      <item.icon className="inline-block h-5 w-5 text-white hover:text-yellow-2400  " /> 
-                    </a>
+                    <button 
+                    className={item.current ? 'active' : 'text-gray-300  px-3 py-2 rounded-md text-sm font-medium '}    
+                    onClick={()=>scrollToSection(item.name)}
+                    >
+                      <abbr title={item.name}>
+                        <item.icon className="inline-block h-5 w-5 text-white hover:text-yellow-2400  hover:text-yellow-300" /> 
+                      </abbr>
+                    </button>
                   </li>
                 ))}
               </ul>
@@ -35,9 +43,11 @@ const Navbar = () => {
       <div className="md:hidden" id="mobile-menu">
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           {navigation.map((item, index) => (
-            <a key={index} href={item.href} className={item.current ? 'active' : 'text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium'}>
+            <button className={item.current ? 'active' : 'text-gray-300  block px-3 py-2 rounded-md text-base font-medium '}
+            onClick={()=>scrollToSection(item.name)}
+            >
               <item.icon className="mr-3 h-6 w-6 inline-block" /> {item.name}
-            </a>
+            </button>
           ))}
         </div>
       </div>
